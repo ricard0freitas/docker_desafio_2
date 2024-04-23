@@ -1,2 +1,2 @@
-/node_modules
-/mysql
+node_modules/
+mysql/
