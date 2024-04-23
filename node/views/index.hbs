@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+</head>
+
+<body>
+    <div class="container mt-4">
+        {{#if erro }}
+        <h4 class="alert alert-danger mt-4">{{erro}}</h4>
+        {{/if}}
+
+        {{#if sucesso }}
+        <h4 class="link-success success alert-success mt-4">{{sucesso}}</h4>
+        {{/if}}
+
+        <h1>Full Cycle Rocks!</h1>
+
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <form action="/" method="POST">
+                    <div class="mb-3">
+                        <label for="name-reg" class="form-label">Pessoa</label>
+                        <input type="text" class="form-control" id="name-reg" name="pessoa">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Adicionar Nome</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-4">
+        <div class="row pt-4">
+            <div class="col-12">
+                <h4>Tabela People</h4>
+                <ul class="list-group list-group-flush" style="width: 287px;" id="lista_nomes">
+                    {{#each lista_nomes}}
+                    <li class="list-group-item" style="pre-line">{{this}}</li>
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
